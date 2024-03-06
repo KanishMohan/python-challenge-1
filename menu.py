@@ -217,16 +217,17 @@ for i in range(len(order)):
     item_spaces = " " * num_item_spaces
     price_spaces = " " * num_price_spaces
     # 10. Print the item name, price, and quantity
-    print(f'{item_name} {item_spaces} | ${price} {price_spaces} | {item_quantity} ')
+    print(f'{item_name} {item_spaces} | ${price} {price_spaces} | {quantity} ')
 
 # 11. Calculate the cost of the order using list comprehension
-#if __name__ == __main__:
+# price = sum (item ['price'] * ['item']} is ${price*quantity}')
+
+# for i in range(len(order)):
+# print(f'Cost of the order is ${price*quantity}')
+# i += 1
 
 # Multiply the price by quantity for each item in the order list, then sum()
 # and print the prices.
+total = sum([i["Price"] * i["Quantity"] for i in order])
+print (f"The order otal is ${total: .2f}")
 
-#def multiply_each_item(order =  quantity * price):
- #   return [item_name * multiply_each_item for item_name in order]
-#order_total = sum(multiply_each_item)
-
-print(f"Your total for {item_name} is  ${quantity * price}")
